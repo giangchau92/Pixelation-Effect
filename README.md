@@ -1,7 +1,6 @@
 # Pixelation-Effect
 
-Following my idol.
-This is my practice.
+Censor Effect using shader in Unity3D
 
 ## Demo
 
