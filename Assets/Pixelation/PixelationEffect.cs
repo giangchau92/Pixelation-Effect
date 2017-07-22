@@ -10,5 +10,6 @@ public class PixelationEffect : ImageEffectBase {
 		Graphics.Blit (source, small);
 		small.filterMode = FilterMode.Point;
 		Graphics.Blit (small, destination);
+		RenderTexture.ReleaseTemporary (small);
 	}
 }

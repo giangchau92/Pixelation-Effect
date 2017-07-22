@@ -12,11 +12,11 @@ public class PixelationEffectMask : ImageEffectBase {
 
 	void Awake() {
 		_thisCamera = GetComponent<Camera> ();
-		_camera.CopyFrom (_thisCamera);
+//		_camera.CopyFrom (_thisCamera);
 	}
 
 	void OnRenderImage(RenderTexture source, RenderTexture destination) {
-		_savedRT = RenderTexture.GetTemporary (source.width, source.height);
+		_savedRT = RenderTexture.GetTemporary (source.width, source.height, 24, RenderTextureFormat.ARGB32);
 		RenderTexture.active = _savedRT;
 		GL.Clear (false, true, Color.clear);
 		RenderTexture.active = null;
